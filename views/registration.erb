@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- SGML Comment
+ Filename: views/registration.erb
+ Directory: /Users/abruzzim/Documents/ga_wdi/projects/blog
+ Version: 0.0-1
+ Author: Mario Abruzzi
+ Date: 16-Dec-2013
+ Desc: Create New User Form
+ Notes: 
+-->
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <p>%DEBUG-I-REGISTRATION_ERB, In views/registration.erb</p><br />
+  <div class="registration">
+    <!-- 
+    Form Action: The URI of a program that processes the information submitted via the form. This value can be overridden by a formaction attribute on a <button> or <input> element. 
+    -->
+    <!-- 
+    Form Method: The HTTP method that the browser uses to submit the form. Possible values are: 
+    
+      1) post: Corresponds to the HTTP POST method; the data from the form is included in the body of the form and is sent to the server.
+
+      2) get: Corresponds to the HTTP GET method; the data from the form are appended to the action attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters. 
+    -->
+    <form class="registration_form" method="POST" action="/user/create">
+      <legend>New User Registration</legend>
+        <label for="POST-fname">First Name: </label>
+        <input id="POST-fname" type="text" name="fname" placeholder="Jane"><br />
+        <label for="POST-lname">Last Name: </label>
+        <input id="POST-lname" type="text" name="lname" placeholder="Doe"><br />
+        <label for="POST-uname">Userame: </label>
+        <input id="POST-uname" type="text" name="uname" placeholder="doej"><br />
+        <label for="POST-pword">Password: </label>
+        <input id="POST-pword" type="password" name="pword" placeholder="password"><br />
+        <label>Biography: </label>
+        <textarea name="bio" maxlength="255" placeholder="Short Bio"></textarea><br />
+        <button type="submit" formmethod="POST" formaction="/user/create" >Add User</button>
+    </form>
+  </div>
+</body>
+</html>

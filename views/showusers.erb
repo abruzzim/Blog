@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- SGML Comment
+ Filename: views/showusers.erb
+ Directory: /Users/abruzzim/Documents/ga_wdi/projects/blog
+ Version: 0.0-1
+ Author: Mario Abruzzi
+ Date: 16-Dec-2013
+ Desc: Week 03 - Day 01 - Demo
+ Notes: 
+-->
+<html>
+<head>
+  <title>BWAIN Show Users</title>
+</head>
+<body>
+<p>%DEBUG-I-SHOWUSERS_ERB, In views/showusers.erb</p><br />
+<table border="1">
+  <!-- Table Header -->
+  <tr>
+    <th>User_ID</th>
+    <th>Fname</th>
+    <th>Lname</th>
+    <th>Uname</th>
+    <th>Biography</th>
+    <th>Created</th>
+    <th>Updated</th>
+  </tr>
+  <!-- Table Body -->
+  <% @userlist.each do |element| %>
+   <tr>
+      <td><%= element.id %></td>
+      <td><%= element.fname %></td>
+      <td><%= element.lname %></td>
+      <td><%= element.uname %></td>
+      <td><%= element.bio %></td>
+      <td><%= element.created_at %></td>
+      <td><%= element.updated_at %></td>
+   </tr>
+  <% end %>
+</table>
+</body>
+</html>

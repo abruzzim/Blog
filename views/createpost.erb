@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- SGML Comment
+ Filename: views/createpost.erb
+ Directory: /Users/abruzzim/Documents/ga_wdi/projects/blog
+ Version: 0.0-1
+ Author: Mario Abruzzi
+ Date: 16-Dec-2013
+ Desc: Create New Post Form
+ Notes: 
+-->
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <p>%DEBUG-I-CREATEPOST_ERB, In views/createpost.erb</p><br />
+  <div class="createpost">
+    <form class="createpost_form" method="POST" action="/post/create">
+      <legend>New Blog Post</legend>
+        <input id="POST-user_id" type="hidden" name="user_id" value="<%= @user_id %>"><br />
+        <label for="POST-title">Title: </label>
+        <input id="POST-title" type="text" name="title" placeholder="Title"><br />
+        <label>Body: </label>
+        <textarea name="body" maxlength="255" placeholder="Blog Text"></textarea><br />
+        <button type="submit" formmethod="POST" formaction="/post/create" >Add Post</button>
+    </form>
+  </div>
+</body>
+</html>

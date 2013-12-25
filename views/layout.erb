@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- SGML Comment
+ Filename: views/layout.erb
+ Directory: /Users/abruzzim/Documents/ga_wdi/projects/blog
+ Version: 0.0-1
+ Author: Mario Abruzzi
+ Date: 16-Dec-2013
+ Desc: 
+ Notes: 
+-->
+
+<html>
+
+  <head>
+    <title>BWAIN</title>
+    <link href="reset.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <!-- Google Font -->
+    <link
+          href="http://fonts.googleapis.com/css?family=Limelight"
+          rel="stylesheet"
+          type="text/css"
+    >
+  </head>
+
+  <body>
+
+  <p>%DEBUG-I-LAYOUT_RB, In views/layout.erb</p><br />
+
+    <div id="layout_container">
+      <h1>BWAIN</h1>
+      <h3>Blog without an Interesting Name</h3>
+        <div class="layout_menu_options">
+          <nav>
+            <a class="layout_option" href="/">Home</a>
+            <!-- If @first_name is defined... -->
+            <% if @first_name %>
+              <!-- ...then display the first_name. -->
+              <a class="layout_option" href="/post/create">Post</a>
+              <a class="layout_option" href="/user/listing">User Listing</a>
+              <a class="layout_option" href="/post/listing">Post Listing</a>
+              <a class="layout_option" href="/user/logout">Logout</a>
+              <span class="layout_option">Welcome <%= @first_name %></span>
+            <% else %>
+              <!-- ...else display menu options. -->
+              <a class="layout_option" href="/user/register">Register</a>
+              <a class="layout_option" href="/user/login">Login</a>
+            <% end %>
+          </nav>
+        </div>
+    </div>
+
+  <!-- Call Sinatra Handler -->
+  <%= yield %>
+
+  </body>
+
+</html>
+

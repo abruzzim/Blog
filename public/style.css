@@ -1,0 +1,44 @@
+/*
+ Filename: public/style.css
+ Directory: /Users/abruzzim/Documents/ga_wdi/projects/blog
+ Version: 0.0-1
+ Author: Mario Abruzzi
+ Date: 16-Dec-2013
+*/
+
+/*  */
+
+/*  */
+#layout_container {
+  padding: 10px;
+  border: 1px dashed blue;
+}
+
+/*  */
+.layout_menu_options {
+  border: 1px dashed red;
+  padding: 10px;
+}
+
+/*  */
+.layout_option {
+  padding: 5px;
+  border: 1px dashed green;
+  margin: 0px;
+
+  text-align: center;
+}
+
+/*  */
+h1 {
+  font-family: 'Limelight', cursive;
+  font-size: 30px;
+  text-align: center;
+}
+
+/*  */
+h3 {
+  font-family: 'Limelight', cursive;
+  font-size: 20px;
+  text-align: center;
+}

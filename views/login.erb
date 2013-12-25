@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- SGML Comment
+ Filename: views/login.erb
+ Directory: /Users/abruzzim/Documents/ga_wdi/projects/blog
+ Version: 0.0-1
+ Author: Mario Abruzzi
+ Date: 16-Dec-2013
+ Desc: User Login Form
+ Notes: 
+-->
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <p>%DEBUG-I-LOGIN_ERB, In views/login.erb</p><br />
+  <form class="login_form" method="POST" action="/user/login">
+    <legend>User Login</legend>
+      <label for="POST-uname">Username: </label>
+      <input id="POST-uname" type="text" name="uname" placeholder="username"><br />
+      <button type="" formmethod="POST" formaction="/user/login">Login</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+/*
+ Filename: public/style.css
+ Directory: /Users/abruzzim/Documents/ga_wdi/projects/blog
+ Version: 0.0-1
+ Author: Mario Abruzzi
+ Date: Mon Dec 23 21:12:58 EST 2013
+*/
+
+/* Debugging Element Border */
+ * {border: 1px dashed red;}
+
+/* Basic Body Style */
+body {background-color: #abcdef;}
+
+/* Basic Div Style */
+div {
+     text-align: center;
+}
+/* Basic h1 Style */
+h1 {
+    background-color: #0066cc;
+    font-family: cursive;
+    text-align: center;
+}
+/* Basic Paragraph Style */
+p {
+   color: yellow;
+}
+/* Basic Anchor Style */
+a {
+   color: #c00;
+   text-decoration: none;
+}
